@@ -1,0 +1,1 @@
+export { DefaultProductFilters } from "./ui/DefaultProductFilters";

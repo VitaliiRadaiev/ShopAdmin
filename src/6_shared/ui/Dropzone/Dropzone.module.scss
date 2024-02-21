@@ -1,0 +1,93 @@
+@import "6_shared/assets/styles/var/breakpoints";
+
+.dropzone_dragEnter {
+    & .fileField {
+        background-color: #fff;
+        border-color: rgba(0, 0, 0, 0.125)
+    }
+}
+
+.fileField {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    height: 80px;
+    cursor: pointer;
+    border: 2px solid transparent;
+
+    @media #{$mouse-device} {
+        &:hover {
+            background-color: rgba(#fff, 0.8);
+        }
+    }
+}
+
+.preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    
+    &:empty {
+        display: none;
+    }
+
+    &__item {
+        position: relative;
+        flex: 0 1 calc(50% - (1rem * 2 / 3));
+        border-radius: 0.25rem;
+        background-color: #fff;
+        padding: 0.75rem;
+        word-break: break-word;
+        overflow: hidden;
+
+        @media (min-width: $mq-md) {
+            flex: 0 1 calc(33.333333% - (1rem * 2 / 3));
+        }
+        @media (min-width: $mq-lg) {
+            flex: 0 1 calc(25% - (1rem * 2 / 3));
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        &:hover {
+            & .preview__remove {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+    }
+
+    &__remove {
+        position: absolute;
+        z-index: 4;
+        top: 15px;
+        left: 50%;
+        color: #fff;
+        padding: 0.25rem;
+        border-radius: 50%;
+        width: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0d6efd;
+        margin-left: -16px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--duration-and-timing-func);
+        border: none;
+        
+        & img, & svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

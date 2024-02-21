@@ -1,0 +1,26 @@
+.category {
+    display: block;
+    position: relative;
+
+    &__options {
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        display: flex;
+        gap: 0.5rem;
+        align-items: flex-start;
+
+        & > * {
+            align-self: flex-start;
+            font-size: 1rem !important;
+        }
+    }
+}
+
+.option_item {
+    //background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    height: 100%;
+}

@@ -1,0 +1,86 @@
+@import "6_shared/assets/styles/var/breakpoints";
+
+.input {
+    display: flex;
+    width: 100%;
+    outline: none;
+    border: none;
+    min-height: 4rem;
+    color: var(--text-color-dark);
+    padding: 1rem var(--gap-3);
+    border-radius: var(--border-radius-2);
+    background-color: var(--theme-color-secondary-opacity-1);
+    cursor: pointer;
+    border: 2px solid transparent;
+
+    @media #{$mouse-device} {
+        &:hover {
+            background-color: var(--theme-color-secondary-opacity-3);
+        }
+    }
+
+    &::placeholder {
+        transition: opacity .15s ease;
+        color: var(--text-color-dark);
+    }
+    &:focus {
+        border-color: var(--theme-color-primary);
+        background-color: var(--theme-color-fourth) !important;
+        &::placeholder {
+            opacity: 0;
+        }
+    }
+
+    &.error {
+        border: 2px solid var(--theme-color-error);
+        color: var(--text-color-error);
+    }
+    
+    &.error::placeholder {
+        color: var(--text-color-error);
+    }
+}
+
+.input_password {
+    position: relative;
+
+    & .input {
+        padding-right: var(--gap-4);
+    }
+}
+
+.input_password_icon {
+    position: absolute;
+    z-index: 5;
+    height: 2rem;
+    max-height: 80%;
+    top: 50%;
+    right: var(--gap-2);
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    & svg {
+        height: 100%;
+        width: auto;
+    }
+}
+
+.textarea {
+    width: 100%;
+    resize: none;
+    padding: var(--gap-2);
+    outline: none;
+    display: block;
+    border-radius: var(--border-radius-2);
+    border: none;
+    overflow: hidden;
+    white-space: pre-wrap;
+    line-height: 1.42em;
+
+    &:focus {
+        outline: solid 2px var(--theme-color-primary);
+        &::placeholder {
+            opacity: 0;
+        }
+    }
+}

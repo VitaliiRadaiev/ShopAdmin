@@ -1,0 +1,12 @@
+.toast {
+    left: 1rem;
+    bottom: 1rem;
+    transform: translateY(calc(100% + 1rem));
+    transition: transform .3s ease;
+    background-color: #fff;
+
+    &.show {
+        transform: translateY(0);
+        opacity: 1 !important;
+    }
+}

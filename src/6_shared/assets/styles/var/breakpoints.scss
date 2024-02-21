@@ -1,0 +1,17 @@
+/* Breakpoints */
+$mq-sm: 576px;
+$mq-md: 768px;
+$mq-lg: 992px;
+$mq-xl: 1200px;
+$mq-xxl: 1400px;
+$mouse-device: "(hover: hover) and (pointer: fine)";
+$touch-device: "(hover: none) and (pointer: coarse)";
+
+$breakpoints: (
+    "sm": "#{$mq-sm}",
+    "md": "#{$mq-md}",
+    "lg": "#{$mq-lg}",
+    "xl": "#{$mq-xl}",
+    "xxl": "#{$mq-xxl}"
+);
+

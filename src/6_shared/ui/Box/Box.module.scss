@@ -1,0 +1,12 @@
+.box {
+    background-color: var(--theme-color-fourth);
+    border-radius: var(--border-radius-3);
+    overflow: hidden;
+    box-shadow: var(--shadow-default);
+    position: relative;
+}
+.box__inner {
+    --padding: 1;
+    padding: calc(var(--step) * var(--padding));
+    background-color: var(--theme-color-secondary-opacity-1);
+}

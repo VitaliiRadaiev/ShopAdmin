@@ -1,0 +1,43 @@
+@import "6_shared/assets/styles/var/breakpoints";
+
+.popover {
+    &.inline {
+        display: inline-block;
+    }
+    &__box {
+        position: fixed;
+        z-index: 10;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 8px 12px #091e4226,0 0 1px #091e424f;
+        padding: 15px;
+        max-width: 400px;
+        overflow: hidden;
+    }
+
+    &__head {
+        padding: 0 var(--gap-3);
+        text-align: center;
+    }
+
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        padding: var(--gap-1);
+        border-radius: var(--border-radius-1);
+        cursor: pointer;
+        border: none;
+
+        & img, & svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &__content {
+        margin-top: var(--gap-3);
+    }
+}
